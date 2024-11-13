@@ -53,6 +53,7 @@ public class AIScript : MonoBehaviour
     IEnumerator kickBallTowards(GameObject target){
         //Stop the ball
         ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        sceneManager.BallHit();
         //Wait for a second
         yield return new WaitForSeconds(.5f);
         //Calculate the direction to the target

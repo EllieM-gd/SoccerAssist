@@ -53,6 +53,8 @@ public class SceneManager : MonoBehaviour
 
     public void RestartGame(){
         //Reload the scene
+        gameOverUI.enabled = false;
+        StopAllCoroutines();
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
